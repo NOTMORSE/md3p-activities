@@ -2,6 +2,7 @@ package com.example.activity1
 
 import android.os.Build
 import androidx.annotation.RequiresApi
+
 import java.time.LocalDate
 
 @RequiresApi(Build.VERSION_CODES.O)
@@ -9,7 +10,7 @@ fun main() {
     println("Welcome to the library")
     print("Please enter your username: ")
     val name = readln()
-    println("Greetings $name")
+    println("Greetings ${name.uppercase()}")
     val date = LocalDate.now()
     println("Here are the available books as of $date")
     println("Fantasy:")
@@ -20,9 +21,10 @@ fun main() {
                 "The Dark Tower Series by Stephen King (2016)\n" +
                 "The Name Of The Wind by Patrick Rothfuss (2009)\n" +
                 "American Gods by Neil Gaiman  (2015)\n" +
-                "Good Omens by Neil Gaiman and Terry Pratchett (2006)"
-    )
-    println("$book")
+                "Good Omens by Neil Gaiman and Terry Pratchett (2006)")
+    val separator1 = ", "
+    val result1 = book.joinToString(separator1)
+    println(result1)
     println("Romance:")
     val books = listOf(
         "The Proposal by Jasmine Guillory (2018) \n" +
@@ -31,7 +33,9 @@ fun main() {
                 "The Kiss Quotient by Helen Hoang (2018) \n" +
                 "I Kissed Shara Wheeler by Casey McQuiston"
     )
-    println("$books")
+    val separator2 = ", "
+    val result2 = books.joinToString(separator2)
+    println(result2)
     println("Horror:")
     val books2 = listOf(
         "Salem's Lot by Stephen King (1975)\n" +
@@ -41,7 +45,9 @@ fun main() {
                 "White Is for Witching by Helen Oyeyemi (2009)\n" +
                 "The Haunting of Hill House by Shirley Jackson (1959)"
     )
-    println("$books2")
+    val separator3 = ", "
+    val result3 = books2.joinToString(separator3)
+    println(result3)
     println("History:")
     val books3 = listOf(
         "Guns,Germs,and Steel by Jared Diamond (1997)\n" +
@@ -49,12 +55,13 @@ fun main() {
                 "The Crusades: The Authoritative History of the War for the Holy Land by Thomas Asbridge (2010)\n" +
                 "SPQR: A History of Ancient Rome by Mary Beaard (2015)"
     )
-    println("$books3")
+    val separator4 = ", "
+    val result4 = books3.joinToString(separator4)
+    println(result4)
 
     println("What book do you want to learn more about? ")
-    var stringValue = "Any"
     print("Please enter the book's complete title: ")
-    stringValue = readln()
+    val stringValue: String = readln()
 
     when (stringValue.lowercase()) {
         "the harry potter series" -> {
@@ -67,7 +74,7 @@ fun main() {
         }
         "lord of the rings" -> {
             println(
-                "T\"he Lord of the Rings\" is the story of Sauron's efforts\n" +
+                "\"The Lord of the Rings\" is the story of Sauron's efforts\n" +
                         "to get the One Ring of Power and thereby conquer Middle-earth.\n" +
                         "Frodo Baggins, a hobbit, holds the Ring after being warned by his buddy Gandalf.\n" +
                         "Frodo goes across Middle-earth with the support of friends from home and new companions he meets \n" +
@@ -212,10 +219,8 @@ fun main() {
         else -> {
             println("ERROR!!, Please follow the instructions")
             println("What book do you want to learn more about? ")
-            var stringValue2 = "Any"
             print("Please enter the book's complete title: ")
-            stringValue2 = readln()
-
+            val stringValue2: String = readln()
             when (stringValue2.lowercase()) {
                 "the harry potter series" -> {
                     println(
