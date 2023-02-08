@@ -110,8 +110,8 @@ fun main() {
         }
         "B" -> {
             print("Please enter your message here: ")
-            readln()
-            println("Thank you, we will announce it shortly") }
+            val assigns = readln()
+            println("Thank you, we will announce \"$assigns\" shortly") }
         "C" -> {
             print("Please indicate the assignment you wish to assign: ")
             val assign: String = readln()
