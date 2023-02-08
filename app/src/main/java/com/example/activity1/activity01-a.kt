@@ -69,7 +69,8 @@ fun main() {
         println("Great Job!!")
     }
     val update: String = ("What would you like to do?" +
-            "\n Options:[A]UPDATE\n [B]ANNOUNCEMENT\n [C] ASSIGN TASK\n [D] NOTHING: ")
+            "Options:\n" +
+            "[A]UPDATE\n[B]ANNOUNCEMENT\n[C]ASSIGN TASK\n[D]NOTHING: ")
     print(update)
     val actup: String = readln()
     when (actup.uppercase()) {
