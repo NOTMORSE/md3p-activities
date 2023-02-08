@@ -11,7 +11,7 @@ fun main() {
     val name: String = ("Please enter your username: ")
     print(name)
     val user: String = readln()
-    val pass2: String = ("\"Caution: Digts only\"")
+    val pass2: String = ("\"Caution: Digits only\"")
     val pass: String = ("Please enter your password: ")
     print("$pass2\n$pass")
     readln().toInt()
@@ -74,34 +74,34 @@ fun main() {
     val actup: String = readln()
     when (actup.uppercase()) {
         "UPDATE" -> {
-            print("What Activty would you like to update?" +
+            print("What Activity would you like to update?" +
                         "\n Options:LESSON1:ACT1/LESSON1:ACT2/LESSON2:ACT1/LESSON2:ACT2: ")
             val actstatus: String = readln().uppercase()
             if (actstatus == "LESSON1:ACT1") {
                 print("How many pupils will you include in LESSON1:ACT1? ")
                 val acstatus2 = readln().toInt()
-                if (acstatus2 <= studentsample) {
+                if (acstatus2 + studentsample <= 40) {
                     println("Thank you, we will update it shortly")
                 } else {
                     println("ERROR!!!The number of students exceed the requirements") } }
             if (actstatus == "LESSON1:ACT2") {
                 print("How many pupils will you include in LESSON1:ACT2? ")
                 val acstatus3 = readln().toInt()
-                if (acstatus3 <= studentsample) {
+                if (acstatus3 + studentsample2 <= 40) {
                     println("Thank you, we will update it shortly")
                 } else {
                     println("ERROR!!!The number of students exceed the requirements") } }
             if (actstatus == "LESSON2:ACT1") {
                 print("How many pupils will you include in LESSON2:ACT1? ")
                 val acstatus4 = readln().toInt()
-                if (acstatus4 <= studentsample) {
+                if (acstatus4 + studentsample3 <= 40) {
                     println("Thank you, we will update it shortly")
                 } else {
                     println("ERROR!!!The number of students exceed the requirements") } }
             if (actstatus == "LESSON2:ACT2") {
                 print("How many pupils will you include in LESSON2:ACT2? ")
                 val acstatus5 = readln().toInt()
-                if (acstatus5 <= studentsample) {
+                if (acstatus5 + studentsample4 <= 40) {
                     println("Thank you, we will update it shortly")
                 } else {
                     println("ERROR!!!The number of students exceed the requirements") } }
