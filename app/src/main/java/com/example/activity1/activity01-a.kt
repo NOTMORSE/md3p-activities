@@ -22,9 +22,9 @@ fun main() {
     println("Students in your class: \"40\"")
     println("Top 10")
     val list = listOf(
-        "1.Julian Tapia: 96%\n" + "2.Rebekah Holt: 95%\n" + "3.Nannie Chavez: 94%\n" +
-                "4.Stacey Stephens: 93.50%\n" + "5.Yaseen Mcleod: 93%\n" + "6.Lorna King: 92%\n" +
-                "7.Oisin Young: 91.25%\n" + "8.Elisa Valdez: 91%\n" + "9.Jerome Robbins: 90%\n" + "10.Idris Mathis: 89%\n"
+        "1.Andrew Bustos: 96%\n" + "2.Jeffrey Saltiga: 95%\n" + "3.John Chris Bolanio: 94%\n" +
+                "4.Jun Zon: 93.50%\n" + "5.Noven Rey Gunmad: 93%\n" + "6.Andrei Condino: 92%\n" +
+                "7.Vanchan Navidad: 91.25%\n" + "8.Seong Phil: 91%\n" + "9.Xandrei Xhou: 90%\n" + "10.Ley De: 89%\n"
     )
     val separator = ", "
     val result = list.joinToString(separator)
