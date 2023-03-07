@@ -25,11 +25,11 @@ fun main() {
         cart.forEach { (item, quantity) -> println("$item x$quantity") }
 
         println("Enter 'add' to add item to cart, 'remove' to remove item from cart, 'checkout' to checkout")
-
+        print("Choose your desired action: ")
         when (scanner.nextLine()) {
             "add" -> {
 
-                println("Enter item name: ")
+                print("Enter item name: ")
                 val item = scanner.nextLine()
 
                 println("Enter quantity:")
@@ -40,7 +40,7 @@ fun main() {
             }
             "remove" -> {
 
-                println("Enter item name:")
+                print("Enter item name:")
                 val item = scanner.nextLine()
 
                 removeFromCart(item, cart)
