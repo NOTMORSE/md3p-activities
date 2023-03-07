@@ -1,6 +1,7 @@
 package com.example.activity1
 
-import java.util.Scanner
+import java.util.*
+import kotlin.collections.HashMap
 
 fun main() {
 
@@ -9,7 +10,7 @@ fun main() {
         "Rice", "Pasta", "Flour", "Sugar", "Salt",
         "Chicken", "Beef", "Pork", "Fish", "Shrimp",
         "Apples", "Bananas", "Oranges", "Grapes", "Strawberries"
-    )
+    ).map { it.lowercase(Locale.getDefault()) }
 
     val cart = hashMapOf<String, Int>()
 
@@ -18,30 +19,44 @@ fun main() {
     while (true) {
 
         println("Grocery List:")
-        groceryList.forEach { item -> println(item) }
+        groceryList.forEach { item -> println(item.replaceFirstChar {
+            if (it.isLowerCase()) it.titlecase(
+                Locale.getDefault()
+            ) else it.toString()
+        }) }
 
 
         println("Cart:")
-        cart.forEach { (item, quantity) -> println("$item x$quantity") }
+        cart.forEach { (item, quantity) -> println("${item.replaceFirstChar {
+            if (it.isLowerCase()) it.titlecase(
+                Locale.getDefault()
+            ) else it.toString()
+        }} x$quantity") }
 
         println("Enter 'add' to add item to cart, 'remove' to remove item from cart, 'checkout' to checkout")
         print("Choose your desired action: ")
-        when (scanner.nextLine()) {
+        when (scanner.nextLine().lowercase(Locale.getDefault())) {
             "add" -> {
 
                 print("Enter item name: ")
-                val item = scanner.nextLine()
+                val item = scanner.nextLine().lowercase(Locale.getDefault())
 
-                println("Enter quantity:")
-                val quantity = scanner.nextInt()
-                scanner.nextLine()
+                if (groceryList.contains(item)) {
 
-                addToCart(item, quantity, cart)
+                    print("Enter quantity: ")
+                    val quantity = scanner.nextInt()
+                    scanner.nextLine()
+
+                    addToCart(item, quantity, cart)
+                } else {
+                    println("${item.replaceFirstChar { if (it.isLowerCase()) it.titlecase(Locale.getDefault()) else it.toString() }} is not in the grocery list.")
+                }
+
             }
             "remove" -> {
 
                 print("Enter item name:")
-                val item = scanner.nextLine()
+                val item = scanner.nextLine().lowercase(Locale.getDefault())
 
                 removeFromCart(item, cart)
             }
