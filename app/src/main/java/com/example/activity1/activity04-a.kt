@@ -32,17 +32,12 @@ fun main() {
 
     val scanner = Scanner(System.`in`)
     while (true) {
-        print("Enter search type (id or name) or 'exit' to quit: ")
-        val searchType = scanner.nextLine()
-        if (searchType == "exit") {
-            break
-        } else if (searchType != "id" && searchType != "name") {
-            println("Invalid search type.")
-            continue
-        }
-        print("Enter search string: ")
+        print("Enter search string (or 'exit' to quit): ")
         val input = scanner.nextLine()
-        val matches = searchStudentWildSearch(input, students, searchType)
+        if (input == "exit") {
+            break
+        }
+        val matches = searchStudentWildSearch(input, students)
         if (matches.isEmpty()) {
             println("No matches found.")
         } else {
@@ -52,15 +47,12 @@ fun main() {
     }
 }
 
-fun searchStudentWildSearch(searchString: String, students: List<Student>, searchType: String): ArrayList<Student> {
+fun searchStudentWildSearch(searchString: String, students: List<Student>): ArrayList<Student> {
     val result = ArrayList<Student>()
     for (student in students) {
-        if (searchType == "id" && student.id.toString() == searchString) {
-            result
-                .add(student)
-        } else if (searchType == "name" && (student.firstName.contains(searchString, ignoreCase = true) ||
-                    student.lastName.contains(searchString, ignoreCase = true) ||
-                    student.nickName.contains(searchString, ignoreCase = true)))
+        if (student.firstName.contains(searchString, ignoreCase = true) ||
+            student.lastName.contains(searchString, ignoreCase = true) ||
+            student.nickName.contains(searchString, ignoreCase = true))
         {
             result.add(student)
         }
