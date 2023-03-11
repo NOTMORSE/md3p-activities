@@ -32,7 +32,7 @@ fun main() {
 
     val scanner = Scanner(System.`in`)
     while (true) {
-        print("Enter search string (or 'exit' to quit): ")
+        print("Enter a nickname (or 'exit' to quit): ")
         val input = scanner.nextLine()
         if (input == "exit") {
             break
