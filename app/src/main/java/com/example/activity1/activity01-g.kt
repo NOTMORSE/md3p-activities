@@ -1,20 +1,34 @@
 package com.example.activity1
 
+import java.util.*
+
 fun main() {
     while (true) {
-        print("Enter a string (or 'quit' to exit): ")
-        val input = readLine()!!.trim()
+        print("Enter a string (or 'exit' to quit): ")
+        val inputString = readLine()!!.lowercase(Locale.getDefault())
 
-        if (input == "quit") {
+        if (inputString == "exit") {
             break
         }
 
-        val reversed = input.reversed()
+        var isPalindrome = true
+        var leftIndex = 0
+        var rightIndex = inputString.length - 1
 
-        if (input == reversed) {
+        while (leftIndex < rightIndex) {
+            if (inputString[leftIndex] != inputString[rightIndex]) {
+                isPalindrome = false
+                break
+            }
+            leftIndex++
+            rightIndex--
+        }
+
+        if (isPalindrome) {
             println("Palindrome")
         } else {
             println("Not Palindrome")
         }
     }
 }
+
