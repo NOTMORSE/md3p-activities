@@ -1,3 +1,56 @@
 <resources>
     <string name="app_name">ACTIVITY1</string>
+    <string name="application_for_employment">Application for Employment</string>
+    <string name="position_you_are_applying_for">Position You Are Applying For  ________________________________</string>
+    <string name="desired_salary">Desired Salary   _____________________</string>
+    <string name="date_available_for_work">Date Available for work:</string>
+    <string name="personal_information">Personal Information</string>
+    <string name="last_name">Last Name:    </string>
+    <string name="first_name">First Name:</string>
+    <string name="middle">Middle:</string>
+    <string name="middle_name">Middle:</string>
+    <string name="address">Address:</string>
+    <string name="city">City:</string>
+    <string name="state">State:</string>
+    <string name="zip">Zip:</string>
+    <string name="home_phone">Home Phone:</string>
+    <string name="cell_phone">Cell Phone:</string>
+    <string name="email">Email Address:</string>
+    <string name="social_security_number">Social Security Number:</string>
+    <string name="are_you_a_us_citizen">Are you a U.S Citizen?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="have_you_ever_convicted_with_felony">Have you ever been convicted of a felony?</string>
+    <string name="drug_screening_test">If selected for employment, are you willing to submit to pre-emplyment drug screening test?</string>
+    <string name="education">Education</string>
+    <string name="school">School</string>
+    <string name="location">Location</string>
+    <string name="year_attended">Years Attended</string>
+    <string name="degree_received">Degree Received</string>
+    <string name="major">Major</string>
+    <string name="training_certifications_licences">Other training, certifications or license held:</string>
+    <string name="employment">Employment</string>
+    <string name="employer">Employer:</string>
+    <string name="dates_employed">Dates Employed:</string>
+    <string name="work_phone">Work Phone:</string>
+    <string name="pay_rate">Pay Rate:</string>
+    <string name="to">To:</string>
+    <string name="position">Position:</string>
+    <string name="duties_performed">Duties Performed:</string>
+    <string name="supervisors_name_and_title">Supervisor Name and Title:</string>
+    <string name="reason_for_leaving">Reason for leaving:</string>
+    <string name="may_we_contact_them">May we contact them?</string>
+    <string name="references">References</string>
+    <string name="name">Name</string>
+    <string name="title">Title</string>
+    <string name="company">Company</string>
+    <string name="phone">Phone</string>
+    <string name="acknowledgement_and_authorization">Acknowledgement and Authorization</string>
+    <string name="certify">I certify that all answers given herein are true to the best of my knowledge</string>
+    <string name="authorization">I authorize investigation of all statements contained in the application</string>
+    <string name="false_misinformation">In the event of employment i understand that false misinformation</string>
+    <string name="signature">Signature of Applicant</string>
+    <string name="sign_date">Date</string>
+
+
 </resources>
